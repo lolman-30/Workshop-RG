@@ -1,6 +1,6 @@
 # Workshop-RG
 
 ## Introduction
-### Bagas Dwi Pranata
-### FE2143214
-### FE-8
+### Name: Bagas Dwi Pranata
+### ID-Camp: FE2143214
+### Class: FE-8
