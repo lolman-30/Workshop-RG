@@ -6,7 +6,8 @@
 }
 
 html {
-   background-color: grey;
+   font-size: 10px;
+   font-family: sans-serif;
 }
 
 a{
@@ -14,22 +15,23 @@ a{
 }
 
 .container{
-    min-height: 50vh;
-    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 img{
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
+
 p{
     color: black;
     font-size: 1.4rem;
     margin-top: 5px;
 }
+
 .section-title{
     font-size: 4rem;
     font-weight: 300;
@@ -44,56 +46,74 @@ p{
 }
 
 #about .about{
-   text-align: justify;
+   flex-direction: column-reverse;
+   text-align: center;
    max-width: 1200px;
    margin: 0 auto;
    padding: 100px 20px;
 }
-
 #about .col-left{
-   width: 600px;
-   height: 400px;
-   padding-left: 60px;
+   width: 250px;
+   height: 360px;
 }
-
 #about .col-right{
    width: 100%;
-   text-align: left;
-   padding: 30px;
 }
-
-#about .col-right h1{
-   text-align: left;
+#about .col-right h2{
+   font-size: 1.8rem;
+   font-weight: 500;
+   letter-spacing: .2rem;
+   margin-bottom: 10px;
 }
-
 #about .col-right p{
    margin-bottom: 20px;
    text-align: justify;
 }
-
 #about .col-left .about-img{
    height: 100%;
    width: 100%;
    position: relative;
+   border: 10px solid white;
 }
 #about .col-left .about-img::after{
    content: '';
    position: absolute;
-   left: -45px;
-   top: 34px;
+   left: -33px;
+   top: 19px;
    height: 98%;
    width: 98%;
-   border: 10px solid crimson;
+   border: 7px solid crimson;
    z-index: -1;
 }
 
-#footer .footer{
-   min-height: 200px;
-   flex-direction: column;
-   padding-top: 50px;
-   padding-bottom: 10px;
-}
+@media only screen and (min-width: 768px){
+   h1 .section-title{
+      font-size: 6rem;
+   }
 
-#footer {
-   text-align: center;
+   #hero h1{
+      font-size: 7rem;
+   }
+   #about .about{
+      flex-direction: row;
+   }
+   #about .col-left{
+      width: 600px;
+      height: 400px;
+      padding-left: 60px;
+   }
+   #about .about .col-left .about-img::after{
+      left: -45px;
+      top: 34px;
+      height: 98%;
+      width: 98%;
+      border: 10px solid crimson;
+   }
+   #about .col-right{
+      text-align: left;
+      padding: 30px;
+   }
+   #about .col-right h1{
+      text-align: left;
+   }
 }
