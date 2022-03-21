@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap');
+@import "color.scss";
+
+body{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Montserrat', sans-serif;
+}
+
+.brand {
+  a {
+    font-size: 2rem;
+    color: $White;
+    span{
+      color: $Red;
+    }
+  }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $Blue;
+  height: 50px;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-transform: uppercase;
+  }
+
+  li {
+    display: inline-block;
+  }
+  a {
+    display: block;
+    padding: 6px 12px;
+    text-decoration: none;
+  }
+  button {
+   background: none;
+   color: #ffff;
+   border: none;
+   font-size: 1.3rem;
+   padding: .5rem 1.3rem;
+   cursor: pointer;
+ }
+}
+
+.container {
+  width: 1200px;
+  min-height: 300px;
+  height: 55vh;
+  margin: auto;
+  margin-bottom: 8rem;
+  box-sizing: border-box;
+  div{
+    display: block;
+    min-width: 300px;
+    width: 500px;
+    margin-top: 30vh;
+    h2{
+        width: 400px;
+        font-size: 2.3rem;
+    }
+    p{
+        font-weight: 300;
+        font-size: 1.2rem;
+        width: 300px;
+    }
+    div{
+        display: flex;
+        gap: 1rem;
+        margin: 0;
+        button{
+          background: none;
+          color: $Blue;
+          border: none;
+          font-size: 1.3rem;
+          padding: .5rem 1.3rem;
+          cursor: pointer;
+          &:nth-child(2){
+              background-color: $White;
+          }
+        }
+    }
+  }
+  img{
+    height: 80vh;
+    min-height: 50vh;
+    position: absolute;
+    top: 5rem;
+    right: 40%;
+    transform: translateX(47%);
+    z-index: -1;
+    border-radius: 15px;
+  }
+}
+
+.product {
+  width: 1200px;
+  margin: auto;
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  h2{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2rem;
+    text-align: center;
+    position: absolute;
+    transform: translateY(-150px);
+    left: 23%;
+    span{
+      color: $Red;
+    }
+  }
+  img{
+      width: 300px;
+  }
+  .card{
+    border-radius: 15px;
+    width: 300px;
+    border: 1px solid $Blue;
+    margin: 1rem 0;
+    padding: 1rem;
+    h3{
+        font-weight: 800;
+        font-size: 1rem;
+    }
+    p{
+        font-weight: 300;
+    }
+    div{
+        p{
+            font-weight: 800;
+            font-size: 1.5rem;
+        }
+    }
+  }
+}
+
+#about{
+  flex-direction: column-reverse;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 20px;
+  button {
+    background: none;
+    color: $Blue;
+    border: none;
+    font-size: 1.3rem;
+    padding: .5rem 1.3rem;
+    cursor: pointer;
+  }
+  img {
+    border-radius: 15px;
+  }
+  h2 {
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2rem;
+    text-align: center;
+    span{
+      color: $Red;
+    }
+  }
+}
+#about .col-left{
+  width: 250px;
+  height: 360px;
+}
+#about .col-right{
+  width: 100%;
+}
+#about .col-right h2{
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: .2rem;
+  margin-bottom: 10px;
+}
+#about .col-right p{
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+#contact .contact{
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  text-align: center;
+  span{
+    color: $Red;
+  }
+  h3{
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  form{
+    min-width: 300px;
+    margin: auto;
+    width: 60%;
+    input{
+        &[type="text"]{
+            padding: 1rem;
+            margin-right: 1rem;
+            outline: none;
+            border: 1px solid $Blue;
+            width: 80%;
+        }
+        &[type="submit"]{
+            background: $Blue;
+            border: none;
+            color: #ffff;
+            font-size: .8rem;
+            padding: 1rem 1.3rem;
+            border: 1px solid #ffff;
+            cursor: pointer;
+        }
+    }
+  }
+}
+
+#footer{
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    span {
+      color: $Red;
+    }
+  }
+  p{
+    color: white;
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  & > div{
+    padding: 1rem 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    div, ul{
+        width: 250px;
+        flex-grow: 1;
+    }
+    ul{
+      li{
+          list-style: none;
+          margin: 1rem 0;
+          a{
+              text-decoration: none;
+              font-size: 1.3rem;
+              font-weight: 400;
+              color: $Blue;
+          }
+      }
+    }
+  }
+}
